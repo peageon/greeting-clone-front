@@ -19,7 +19,9 @@ export const SidebarTab = ({
     <Link
       className={cn(
         "py-2 px-4 gap-3 flex flex-row items-center h-8 w-full rounded cursor-pointer select-none",
-        activePath.startsWith(path) ? "bg-gray-300" : "hover:bg-gray-300"
+        activePath.startsWith(path)
+          ? "bg-gray-300 dark:bg-gray-600"
+          : "hover:bg-gray-300 hover:dark:bg-gray-600"
       )}
       href={path}
       onClick={() => clickHandler(path)}

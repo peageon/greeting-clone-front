@@ -12,6 +12,7 @@ import { SidebarTab } from "./sidebar-tab";
 import { useParams, usePathname } from "next/navigation";
 import { IoMdSettings } from "react-icons/io";
 import { useEffect, useState } from "react";
+import { ModeToggle } from "../util/mode-toggle";
 
 // interface DashboardSidebarProps {
 //   company: string;
@@ -39,7 +40,7 @@ export const DashboardSidebar = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen w-72 bg-gray-200">
+    <div className="flex flex-col h-screen w-72 bg-gray-200 dark:bg-gray-800">
       <Popover>
         <PopoverTrigger asChild>
           <div className="p-2">
@@ -49,8 +50,11 @@ export const DashboardSidebar = () => {
             </div>
           </div>
         </PopoverTrigger>
-        <PopoverContent>
-          <Link href={"/login"}>Home</Link>
+        <PopoverContent className="flex flex-row">
+          <Link className="flex-grow" href={"/login"}>
+            Home
+          </Link>
+          <ModeToggle />
         </PopoverContent>
       </Popover>
       <ul>
