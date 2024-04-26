@@ -28,10 +28,10 @@ export const OpeningBoard = ({
   return (
     <div className="flex flex-col w-full mt-5 min-w-[760px]">
       <CategoryHeader>
-        <div className="flex flex-row gap-2 pb-2 items-center">
+        <div className="flex flex-row gap-2 pb-2 items-center text-2xl">
           <CgMenuGridR />
-          <span>Jobs</span>
-          <Button className="bg-blue-500 rounded-sm py-0 gap-2 h-7 hover:bg-blue-600">
+          <span className="font-semibold">Jobs</span>
+          <Button className="bg-blue-500 rounded-sm ml-4 py-0 gap-2 h-7 hover:bg-blue-600">
             <span>+</span>
             <span>Create a job</span>
           </Button>
@@ -46,12 +46,18 @@ export const OpeningBoard = ({
               <Link href={pathname.replace("archive", "openings")}>Jobs</Link>
             </Button>
             <span
-              className={cn("h-[2px] w-4/5", optionState ? "bg-blue-600" : "")}
+              className={cn(
+                "h-[2px] w-4/5",
+                optionState ? "bg-blue-600" : "font-light"
+              )}
             ></span>
           </div>
           <div className="flex flex-col items-center gap-1">
             <Button
-              className={cn("py-0 px-2", !optionState ? "font-bold" : "")}
+              className={cn(
+                "py-0 px-2",
+                !optionState ? "font-bold" : "font-light"
+              )}
               variant={"ghost"}
               asChild
             >
