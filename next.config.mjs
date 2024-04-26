@@ -12,6 +12,11 @@ const nextConfig = {
         destination: "/workspace/:postid/openings",
         permanent: true,
       },
+      {
+        source: "/",
+        destination: "/workspace/34",
+        permanent: true,
+      },
     ];
   },
 };
