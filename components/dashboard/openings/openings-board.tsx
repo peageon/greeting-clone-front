@@ -26,7 +26,7 @@ export const OpeningBoard = ({
   }, [pathname]);
 
   return (
-    <div className="flex flex-col w-full mt-5">
+    <div className="flex flex-col w-full mt-5 min-w-[760px]">
       <CategoryHeader>
         <div className="flex flex-row gap-2 pb-2 items-center">
           <CgMenuGridR />
