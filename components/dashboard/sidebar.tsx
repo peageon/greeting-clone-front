@@ -3,10 +3,9 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { CompanyAvatar } from "./company-avatar";
 import { Poppins } from "next/font/google";
-import { Button, buttonVariants } from "../ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { CgMenuGridO } from "react-icons/cg";
+import { CgMenuGridR } from "react-icons/cg";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { SidebarTab } from "./sidebar-tab";
 import { useParams, usePathname } from "next/navigation";
@@ -44,7 +43,7 @@ export const DashboardSidebar = () => {
       <Popover>
         <PopoverTrigger asChild>
           <div className="p-2">
-            <div className="p-2 gap-2 flex flex-row items-center w-full hover:bg-gray-300 rounded cursor-pointer select-none">
+            <div className="p-2 gap-2 flex flex-row items-center w-full hover:bg-gray-300 hover:dark:bg-gray-600 rounded cursor-pointer select-none">
               <CompanyAvatar url="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
               <span className={cn(font.className, "flex-grow")}>{company}</span>
             </div>
@@ -64,7 +63,7 @@ export const DashboardSidebar = () => {
             clickHandler={handleClick}
             activePath={activePathState}
           >
-            <CgMenuGridO />
+            <CgMenuGridR />
             <span className={cn(fontThin.className, "flex-grow")}>Jobs</span>
           </SidebarTab>
         </li>
