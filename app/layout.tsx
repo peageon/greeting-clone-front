@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Greeting",
+  title: "그리팅 - 쉽고 편한 채용 솔루션",
   description: "This is a clone of Greeting",
   icons: {
     icon: "/logo.ico",
