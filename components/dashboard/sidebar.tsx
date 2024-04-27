@@ -41,14 +41,14 @@ export const DashboardSidebar = () => {
   return (
     <div className="flex flex-col h-screen min-w-72 shadow-[inset_-7px_0_9px_-7px_rgba(0,0,0,0.2)] dark:shadow-[inset_-7px_0_9px_-7px_rgba(0,0,0,1)] bg-gray-200 dark:bg-gray-800">
       <Popover>
-        <PopoverTrigger asChild>
-          <div className="p-2">
+        <div className="p-2">
+          <PopoverTrigger asChild>
             <div className="p-2 gap-2 flex flex-row items-center w-full hover:bg-gray-300 hover:dark:bg-gray-600 rounded cursor-pointer select-none">
               <CompanyAvatar url="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
               <span className={cn(font.className, "flex-grow")}>{company}</span>
             </div>
-          </div>
-        </PopoverTrigger>
+          </PopoverTrigger>
+        </div>
         <PopoverContent className="flex flex-row">
           <Link className="flex-grow" href={"/login"}>
             Home
