@@ -1,7 +1,7 @@
 "use client";
 
 import { CgMenuGridR } from "react-icons/cg";
-import { CategoryHeader } from "../category-header";
+import { CategoryHeader } from "./category-header";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
@@ -31,7 +31,7 @@ export const OpeningBoard = ({
         <div className="flex flex-row gap-2 pb-2 items-center text-2xl">
           <CgMenuGridR />
           <span className="font-semibold">Jobs</span>
-          <Button className="bg-blue-500 rounded-sm ml-4 py-0 gap-2 h-7 hover:bg-blue-600">
+          <Button className="ml-4 py-0 gap-2 h-7">
             <span>+</span>
             <span>Create a job</span>
           </Button>
