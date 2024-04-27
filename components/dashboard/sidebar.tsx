@@ -39,7 +39,7 @@ export const DashboardSidebar = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen w-72 bg-gray-200 dark:bg-gray-800">
+    <div className="flex flex-col h-screen min-w-72 shadow-[inset_-7px_0_9px_-7px_rgba(0,0,0,0.2)] dark:shadow-[inset_-7px_0_9px_-7px_rgba(0,0,0,1)] bg-gray-200 dark:bg-gray-800">
       <Popover>
         <PopoverTrigger asChild>
           <div className="p-2">
