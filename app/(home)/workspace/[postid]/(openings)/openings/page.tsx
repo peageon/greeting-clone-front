@@ -1,7 +1,7 @@
-import { OpeningBoard } from "@/components/dashboard/openings/openings-board";
+import { JobGrid } from "@/components/dashboard/openings/job-grid";
 
 const OpeningsPage = () => {
-  return <></>;
+  return <JobGrid />;
 };
 
 export default OpeningsPage;
