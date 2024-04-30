@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { LuMoreVertical, LuPlus } from "react-icons/lu";
 import { KanbanUserCard } from "./kanban-user-card";
-import { useEffect, useRef, useState } from "react";
 
 export const KanbanCard = () => {
   const userCount = 10;
@@ -23,7 +22,7 @@ export const KanbanCard = () => {
           </Button>
         </div>
       </div>
-      <div className="flex flex-col items-center p-2 gap-1.5 overflow-y-auto">
+      <div className="flex flex-col items-center p-2 gap-1.5 overflow-y-auto scrollbar-hide">
         <KanbanUserCard />
         <KanbanUserCard />
         <KanbanUserCard />
