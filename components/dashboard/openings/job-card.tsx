@@ -24,6 +24,8 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { LuClock4 } from "react-icons/lu";
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 
 const exampleResponse = {
   link: "https://localhost:3000",
@@ -35,6 +37,8 @@ const exampleResponse = {
 };
 
 export const JobCard = () => {
+  const params = useParams<{ postid: string }>();
+
   const [status, setStatus] = useState("Open");
   const { toast } = useToast();
 
@@ -63,7 +67,7 @@ export const JobCard = () => {
 
   return (
     <div className=" border-[1px] rounded-lg dark:bg-gray-900 shadow">
-      <div>
+      <Link href={`/workspace/${params.postid}/opening/33/kanban`}>
         <div className="flex flex-row p-2 pl-3 items-center justify-between select-none">
           <Select value={status} onValueChange={(e) => changeStatus(e)}>
             <SelectTrigger className="w-[90px] shadow">
@@ -105,7 +109,7 @@ export const JobCard = () => {
             <span>{exampleResponse.created}</span>
           </div>
         </div>
-      </div>
+      </Link>
       <div className="flex flex-row gap-4 text-sm p-2 h-9 bg-neutral-50 dark:bg-transparent items-center font-extralight border-t-[1px]">
         <div className="flex flex-row gap-1">
           <span className="opacity-50">All</span>
