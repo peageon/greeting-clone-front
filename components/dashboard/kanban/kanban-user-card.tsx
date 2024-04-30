@@ -51,17 +51,17 @@ export const KanbanUserCard = () => {
   };
 
   return (
-    <div className=" w-64 relative flex flex-col border-[1px] rounded-lg dark:bg-gray-900 shadow">
+    <div className="w-full relative flex flex-col border-[1px] rounded-lg bg-white dark:bg-gray-900 shadow">
       <div className="px-3">
         <div className="flex flex-row py-2 items-center justify-between">
           <span className="font-semibold">{exampleResponse.name}</span>
         </div>
-        <div>
+        <div className="pb-1.5">
           <Badge className="font-semibold select-none">
             {exampleResponse.route}
           </Badge>
         </div>
-        <div className="pt-2 pb-4">
+        <div className="pb-2">
           <div className="flex flex-row gap-1 items-center opacity-50 text-sm font-extralight">
             <LuClock4 />
             <span>{exampleResponse.created}</span>

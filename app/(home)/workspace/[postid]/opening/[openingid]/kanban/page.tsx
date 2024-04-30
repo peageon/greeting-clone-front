@@ -1,14 +1,7 @@
-import { KanbanUserCard } from "@/components/dashboard/kanban/kanban-user-card";
+import { KanbanBoard } from "@/components/dashboard/kanban/kanban-board";
 
 const KanbanPage = () => {
-  return (
-    <>
-      <KanbanUserCard></KanbanUserCard>
-      <KanbanUserCard></KanbanUserCard>
-      <KanbanUserCard></KanbanUserCard>
-      <KanbanUserCard></KanbanUserCard>
-    </>
-  );
+  return <KanbanBoard />;
 };
 
 export default KanbanPage;
