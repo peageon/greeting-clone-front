@@ -62,11 +62,11 @@ export const JobCard = () => {
   };
 
   return (
-    <div className=" border-[1px] rounded-lg dark:bg-gray-900">
+    <div className=" border-[1px] rounded-lg dark:bg-gray-900 shadow">
       <div>
         <div className="flex flex-row p-2 pl-3 items-center justify-between select-none">
           <Select value={status} onValueChange={(e) => changeStatus(e)}>
-            <SelectTrigger className="w-[90px]">
+            <SelectTrigger className="w-[90px] shadow">
               <SelectValue>{status}</SelectValue>
             </SelectTrigger>
             <SelectContent>
@@ -77,11 +77,15 @@ export const JobCard = () => {
             </SelectContent>
           </Select>
           <DropdownMenu>
-            <DropdownMenuTrigger>
-              <Button className="p-1 h-auto" variant="outline">
+            <Button
+              className="p-1 h-auto drop-shadow"
+              variant="outline"
+              asChild
+            >
+              <DropdownMenuTrigger>
                 <RxDotsHorizontal />
-              </Button>
-            </DropdownMenuTrigger>
+              </DropdownMenuTrigger>
+            </Button>
             <DropdownMenuContent>
               <DropdownMenuItem
                 onClick={() => copyToClipboard(exampleResponse.link)}
